@@ -13,6 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -55,68 +56,8 @@
 <h2>Hillary Clinton's Favorability Ratings Decline</h2>
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
       </div>
-
-      <hr>
-
       
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script>$(function () {
-    $('#container').highcharts({
-    colors: ['#00FF00', '#FF0000'],
-        title: {
-            text: "Hillary Clinton's Favorability Ratings",
-            x: -20 //center
-        },
-        subtitle: {
-            text: 'Source: CNN',
-            x: -20
-        },
-        xAxis: {
-            categories:["4/26/09","8/3/09","10/18/09","1/24/10","4/11/10","10/30/10","1/16/11","11/18/12","6/1/14","11/23/14","3/15/15","5/31/15","7/25/15","8/16/15","10/17/15","12/21/15","1/24/16","2/27/16","3/20/16"]
-},
-        yAxis: {
-            title: {
-                text: 'Rating'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#FFF263'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '%'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'Favorable',
-            data:[64,61,65,63,61,62,66,67,55,59,53,46,45,43,46,47,45,42,43]
-},
- {
-            name: 'Unfavorable',
-            data:[34,35,32,35,35,34,31,28,42,38,44,50,48,55,50,51,52,55,56]
-
-        }]
-    });
-});</script>
-<table>
+     <div class="container"><iframe><table>
   <thead>
     <tr>
       <th class="District-cell">District</th>
@@ -1024,5 +965,71 @@
       <td class="95th-cell">$108,034</td>
     </tr>
   </tbody>
-</table>
+</table></iframe></div>
+
+      <hr>
+
+      
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+$(document).ready(function(){
+    $('#myTable').DataTable();
+});
+$(function () {
+    $('#container').highcharts({
+    colors: ['#00FF00', '#FF0000'],
+        title: {
+            text: "Hillary Clinton's Favorability Ratings",
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: CNN',
+            x: -20
+        },
+        xAxis: {
+            categories:["4/26/09","8/3/09","10/18/09","1/24/10","4/11/10","10/30/10","1/16/11","11/18/12","6/1/14","11/23/14","3/15/15","5/31/15","7/25/15","8/16/15","10/17/15","12/21/15","1/24/16","2/27/16","3/20/16"]
+},
+        yAxis: {
+            title: {
+                text: 'Rating'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#FFF263'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Favorable',
+            data:[64,61,65,63,61,62,66,67,55,59,53,46,45,43,46,47,45,42,43]
+},
+ {
+            name: 'Unfavorable',
+            data:[34,35,32,35,35,34,31,28,42,38,44,50,48,55,50,51,52,55,56]
+
+        }]
+    });
+});</script>
 </html>
